@@ -1,0 +1,5 @@
+To re-run the application, put the following external input files into this directory:
+
+- National harvest statistics over time (FAOSTAT): complete time series (1961-2014) from FAOSTAT's Harvested Area of Wheat at the countries level (FAOSTAT_data_8-1-2017.csv);
+- IFPRI SPAM spatially explicit database of Harvested Areas of Wheat for 2005 (SPAM) (spam2005v2r0_harvested-area_wheat_total.csv)
+- geoferences for the used gridded data from Global Spatially-Disaggregated Crop Production Statistics Data for 2005 Version 3.1 (cell5m_allockey_xy.csv)

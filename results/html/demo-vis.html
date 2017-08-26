@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+
+
+<title>Ethiopia: development of wheat harvest area 1961 - 2014</title>
+
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link href="./noUiSlider.7.0.10/jquery.nouislider.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/various.css">
+
+	<script src="js/jquery-1.7.min.js"></script>
+    <script src="./noUiSlider.7.0.10/jquery.nouislider.all.js"></script>
+
+
+
+
+<script type='text/javascript'>
+
+
+</script>
+
+
+
+</head>
+
+<body bgcolor="white" onload="updateMap()">
+
+<hr color="lightgray" noshade="" size="1" width=800px>
+<table width="800px" style="border-collapse: collapse;" border=0 align="center">
+  <tr>
+  <td align="center">
+  <h2 style="">Ethiopia: development of wheat harvest area 1961 - 2014</h2>
+</table>
+<hr color="lightgray" noshade="" size="1" width=800px>
+
+
+
+<div id="outer-container">
+
+
+<table align="center" style="font-family: 'Lato', sans-serif; font-size:13px" border=0 width="800px">
+
+<tr>
+<td colspan="2" align="left">
+Demo visualization - move the slider to select years to view.
+
+<hr color="lightgray" noshade="" size="1" width=800px>
+
+<tr>
+<td valign="center" width="300">
+
+<table style="font-family:  'Lato', sans-serif; font-size:12px;" border=0>
+<tr>
+<td style="padding-right: 10px" nowrap><b>Select year</b>
+<td style="padding-left: 10px;"><div class="sliders" id="s0"></div>
+<td width="10px" nowrap align='right'><span id="valBox_0" style="padding-left: 10px; font-size:16px; font-weight:bold">1961</span>
+<td width="100%">
+<tr>
+<td colspan=4>
+<img id = "map" src="maps/ethiopia_wheat_harvest_area_1961.png" style="border 1px solid grey" border=1>
+</table>
+
+</table>
+
+<hr color="lightgray" noshade="" size="1" width=800px>
+
+
+
+</div> <!-- outer div -->
+
+
+
+<script>
+
+// Bind feedback function to the slide event.
+$('.sliders').on('slide', showValues);
+
+function showValues(){
+    var sliderVal = $("#s0").val();
+    document.getElementById("valBox_0").innerHTML = sliderVal;
+}
+
+$('.sliders').noUiSlider({
+	start: 2005,
+	connect: "lower",
+    step:  	1,
+	range: {
+		'min': 1961,
+		'max': 2014
+	},
+	format: wNumb({
+		decimals: 0
+	})
+});
+
+// Bind updateMap() to the slide event.
+$('.sliders').on('slide', updateMap);
+
+function updateMap() {
+    var x = parseInt($("#s0").val());
+    // console.log ("maps/ethiopia_wheat_harvest_area_" + x + ".png");
+	$("#map").attr("src", "maps/ethiopia_wheat_harvest_area_" + x + ".png");
+	showValues();
+}
+
+</script>
+
+</body>
+
+
+</html>

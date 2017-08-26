@@ -1,0 +1,36 @@
+.spacer {
+  margin-left: 20px;
+}
+
+#s0, #s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8, #s9, #s10, #s11, #s12, #s13, #s14 {
+		margin: 10px;
+		display: inline-block;
+		width: 205px; // 195px; //217px;
+		background: grey; //#8BBC21; //#1AADCE; //#bcbddc; //#F8B984;
+	}
+
+
+#red, #green, #blue {
+		margin: 10px;
+		display: inline-block;
+		height: 200px;
+	}
+	
+body {
+  font-family:  'Lato', sans-serif;
+  font-size:13px;
+  background-color: #fff;
+  color: #000;
+}
+
+table,td {
+  font-family:  'Lato', sans-serif;
+  font-size:13px;
+  color: #000;
+}
+
+h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #2c1c14; 
+}
